@@ -1,6 +1,7 @@
 import { ProxyState } from "../AppState.js"
 import { Item } from "../Models/Item.js"
 import { saveState } from "../Utils/LocalStorage.js"
+import { listService } from "./ListService.js"
 
 class ListItemsService {
     constructor() {
@@ -18,16 +19,11 @@ class ListItemsService {
     removeItem(itemId) {
         ProxyState.items = ProxyState.items.filter(i => i.id !== itemId)
         ProxyState.items = ProxyState.items
+        listService.taskAmount(itemId)
     }
     addItem(itemData) {
         ProxyState.items = [...ProxyState.items, new Item(itemData)]
         console.log("list items service: AppState (items)" + JSON.stringify(ProxyState.items))
-        console.log(this.itemsTotal(itemData.listId))
-    }
-    itemsTotal(itemId) {
-        let itemInList = ProxyState.lists.find(l => l.id == itemId)
-        itemInList.items++
-            console.log("items total go here " + itemInList.items)
     }
 
 }

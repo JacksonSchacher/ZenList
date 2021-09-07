@@ -1,4 +1,5 @@
 import { listItemsService } from "../Services/ListItemsService.js"
+import { listService } from "../Services/ListService.js"
 
 export class ListItemsController {
     constructor() {
@@ -18,6 +19,7 @@ export class ListItemsController {
             listId: listId
         }
         listItemsService.addItem(itemData)
+        listService.taskAmount(listId)
         form.reset()
     }
 

@@ -7,11 +7,18 @@ class ListService {
         ProxyState.on('lists', saveState)
     }
     removeList(listData) {
-        ProxyState.lists = ProxyState.lists.filter(l => l.name != listData)
+        ProxyState.lists = ProxyState.lists.filter(l => l.id != listData)
     }
     addList(listData) {
         ProxyState.lists = [...ProxyState.lists, new List(listData)]
         console.log("list service: AppState (lists)" + ProxyState.lists)
+    }
+    taskAmount(itemId) {
+        let findItems = ProxyState.lists.filter(l => l.id == itemId)
+        findItems.forEach(i => {
+            i.items++
+        });
+        ProxyState.lists = ProxyState.lists
     }
 }
 

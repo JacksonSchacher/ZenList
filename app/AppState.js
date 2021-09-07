@@ -6,6 +6,7 @@ class AppState extends EventEmitter {
     lists = []
         /** @type {import('./Models/Item').Item[]} */
     items = []
+
 }
 
 export const ProxyState = new Proxy(new AppState(), {
