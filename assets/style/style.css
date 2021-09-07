@@ -1,0 +1,66 @@
+/* BASIC STYLES HERE */
+
+body {
+    background-color: #929997;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.title {
+    font-family: 'Bebas Neue', cursive;
+    color: #ebeceb;
+    margin: 1rem;
+}
+
+.card {
+    border-radius: 15% 15% 15% 2%;
+}
+
+.card-title {
+    padding: 1rem 2rem 0rem;
+}
+
+li {
+    padding: 1rem;
+}
+
+.card-footer {
+    position: absolute;
+    bottom: 0px;
+}
+
+.input-field {
+    background: border-box;
+    border: 0;
+    border-radius: unset;
+}
+
+option {
+    font-family: 'Bebas Neue', cursive;
+}
+
+button {
+    margin-bottom: .25em;
+}
+
+
+/* color classes */
+
+.brown {
+    background: linear-gradient(180deg, rgba(235, 236, 235, 1) 0%, rgba(59, 52, 22, 1) 100%);
+}
+
+.tan {
+    background: linear-gradient(180deg, rgba(235, 236, 235, 1) 0%, rgba(182, 130, 61, 1) 100%);
+}
+
+.green {
+    background: linear-gradient(180deg, rgba(235, 236, 235, 1) 0%, rgba(91, 120, 67, 1) 100%);
+}
+
+.blue {
+    background: linear-gradient(180deg, rgba(235, 236, 235, 1) 0%, rgba(153, 171, 148, 1) 100%);
+}
+
+.light-grey {
+    background: linear-gradient(180deg, rgba(235, 236, 235, 1) 0%, rgba(211, 193, 170, 1) 100%);
+}
