@@ -11,8 +11,11 @@ class ListItemsService {
         let checkedItem = ProxyState.items.find(i => i.id == itemId)
         if (checkedItem.isChecked) {
             checkedItem.isChecked = false
+                //find list and decrement
         } else {
             checkedItem.isChecked = true
+                //increment 
+                // ProxyState.list.find
         }
         ProxyState.items = ProxyState.items
     }
