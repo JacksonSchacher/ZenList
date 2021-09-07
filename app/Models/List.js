@@ -17,7 +17,7 @@ export class List {
                 <div class="d-flex justify-content-between card-header card-title">
                    <h3>${this.name.toUpperCase()}</h3>
                    <h6>${this.itemsChecked} / ${this.items}</h6>
-                    <span onclick="app.listsController.removeList('${this.name}')" class="selectable"><i class="mdi mdi-close-circle"></i></span>
+                    <span onclick="app.listsController.removeList('${this.id}')" class="selectable"><i class="mdi mdi-close-circle"></i></span>
                 </div>
                 <ul class="list-group list-group-flush justify-content-between">
                     <!-- list items go here -->

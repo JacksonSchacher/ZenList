@@ -19,7 +19,7 @@ class ListItemsService {
     removeItem(itemId) {
         ProxyState.items = ProxyState.items.filter(i => i.id !== itemId)
         ProxyState.items = ProxyState.items
-        listService.taskAmount(itemId)
+            // listService.taskAmount(itemId)
     }
     addItem(itemData) {
         ProxyState.items = [...ProxyState.items, new Item(itemData)]
